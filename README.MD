@@ -78,11 +78,11 @@ Content text
 
 Расположение:
 
-    Шаблон: layouts/partials/testimonial.html
+    Шаблон: layouts/partials/review.html
 
-    Данные: data/testimonials.yaml
+    Данные: data/reviews.yaml
 
-Добавление отзыва в data/testimonials.yaml:
+Добавление отзыва в data/reviews.yaml:
 
 ```
 - name: "Имя автора"
