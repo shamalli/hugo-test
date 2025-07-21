@@ -69,8 +69,8 @@ Content text
 Использование в списках
 
 ---
-    {{ range .Pages }}
-        {{ partial "article-card" . }}
+    {{ range where .Site.RegularPages "Section" "blog" }}
+        {{ partial "article-card" (dict "article" . "read_more" "Читать ещё" ) }}
     {{ end }}
 ---
 
@@ -89,6 +89,14 @@ Content text
   position: "Должность"
   content: "Текст отзыва"
 ```
+
+Использование в списках
+
+---
+    {{ range .Site.Data.reviews }}
+        {{ partial "review.html" . }}
+    {{ end }}
+---
 
 ## 3. Страница "О компании"
 
