@@ -48,7 +48,9 @@ hugo server -D
 Расположение:
 
 ```
-layouts/partials/article-card.html
+    Шаблон карточки: layouts/partials/article-card.html
+
+    Шаблон списка: layouts/blog/list.html
 ```
 
 Использование:
@@ -78,9 +80,13 @@ Content text
 
 Расположение:
 
-    Шаблон: layouts/partials/review.html
+```
+    Шаблон отзыва: layouts/partials/review.html
+
+    Шаблон страницы: layouts/reviews/reviews.html
 
     Данные: data/reviews.yaml
+```
 
 Добавление отзыва в data/reviews.yaml:
 
@@ -101,7 +107,7 @@ Content text
 ## 3. Страница "О компании"
 
 ```
-Шаблон: layouts/_default/about.html
+    Шаблон страницы: layouts/_default/about.html
 ```
 
 Настраиваемые параметры в content/about/_index.md:

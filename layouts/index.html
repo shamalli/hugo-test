@@ -1,0 +1,26 @@
+{{ define "main" }}
+  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
+    {{ .Content }}
+  </article>
+
+  <article class="pa3 pa4-ns nested-copy-line-height">
+    <section class="flex-ns mt5 flex-wrap justify-around">
+      {{ range where .Site.RegularPages "Section" "blog" }}
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          {{ partial "article-card" (dict "article" . "read_more" "Читать ещё" ) }}
+        </div>
+      {{ end }}
+    </section>
+    {{- template "_internal/pagination.html" . -}}
+  </article>
+
+  <article class="pa3 pa4-ns nested-copy-line-height">
+    <section class="flex-ns mt5 flex-wrap justify-around">
+      {{ range .Site.Data.reviews }}
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          {{ partial "review.html" . }}
+        </div>
+      {{ end }}
+    </section>
+  </article>
+{{end}}
