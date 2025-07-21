@@ -1,0 +1,26 @@
+baseURL = 'https://example.org/'
+languageCode = 'ru'
+title = 'My New Hugo Site'
+theme = "ananke"
+[params]
+  custom_css = ["css/custom.css"]
+
+[[menu.main]]
+  name = "Главная"
+  url = "/"
+  weight = 10
+
+[[menu.main]]
+  name = "О компании"
+  url = "/about/"
+  weight = 20
+
+[[menu.main]]
+  name = "Статьи"
+  url = "/blog/"
+  weight = 30
+
+[[menu.main]]
+  name = "Отзывы"
+  url = "/reviews/"
+  weight = 30

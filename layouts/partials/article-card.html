@@ -1,0 +1,15 @@
+<article class="article-card">
+  {{ with .article.Params.featured_image }}
+  <div class="article-image">
+    <a href="{{ $.article.RelPermalink }}">
+      <img src="{{ . | relURL }}" alt="{{ $.article.Title }}" loading="lazy">
+    </a>
+  </div>
+  {{ end }}
+  <div class="article-content">
+    <h3><a href="{{ .article.RelPermalink }}" class="link black dim">{{ .article.Title }}</a></h3>
+    <p>{{ .article.Summary | truncate 100 }}</p>
+    <p><time datetime="{{ .article.Date.Format "2006-01-02" }}">{{ .article.Date.Format "2 January 2006" }}</time></p>
+    <a href="{{.article.RelPermalink}}" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">{{ .read_more }}</a>
+   </div>
+</article>
